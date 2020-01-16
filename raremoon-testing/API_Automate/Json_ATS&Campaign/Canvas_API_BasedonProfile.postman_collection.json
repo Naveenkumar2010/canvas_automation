@@ -1,0 +1,1846 @@
+{
+	"info": {
+		"_postman_id": "2df503c7-a804-022c-c146-333d8104d05b",
+		"name": "Canvas_API_BasedonProfile",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login_API",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							""
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"password\": \"test\",\r\n  \"username\": \"test\"\r\n}"
+				},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/login",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "AtsSearchCandidate",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/integration/ats/v1/atscandidate/search?name=b",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"integration",
+						"ats",
+						"v1",
+						"atscandidate",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "b"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ats-candidate-rest-endpoint_PublishPortraitATS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"conversationID\": \"40a3bd31-64b8-4e46-b22b-37da689bfd6c\"\r\n}"
+				},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/integration/ats/v1/atscandidate/publish/portrait/to/ats",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"integration",
+						"ats",
+						"v1",
+						"atscandidate",
+						"publish",
+						"portrait",
+						"to",
+						"ats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ats-candidate-rest-endpoint_publishTranscriptToATS",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"conversationID\": \"40a3bd31-64b8-4e46-b22b-37da689bfd6c\"\r\n}"
+				},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/integration/ats/v1/atscandidate/publish/transcript/to/ats",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"integration",
+						"ats",
+						"v1",
+						"atscandidate",
+						"publish",
+						"transcript",
+						"to",
+						"ats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "ats-candidate-rest-endpoint_AtsJobSearch",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/integration/ats/v1/atsjob/search?name=s",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"integration",
+						"ats",
+						"v1",
+						"atsjob",
+						"search"
+					],
+					"query": [
+						{
+							"key": "name",
+							"value": "s"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outbound-campaign-rest-controller_getoutboundCampaignList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/outboundcampaign?filter-status=default&sort=createDateTime%2Cdesc",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"outboundcampaign"
+					],
+					"query": [
+						{
+							"key": "filter-status",
+							"value": "default"
+						},
+						{
+							"key": "sort",
+							"value": "createDateTime%2Cdesc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outbound-campaign-rest-controller-getOutboundCampaignToInboundList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/outboundcampaign/action/quickstart/inbound?filter-status=default&sort=createDateTime%2Cdesc",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"outboundcampaign",
+						"action",
+						"quickstart",
+						"inbound"
+					],
+					"query": [
+						{
+							"key": "filter-status",
+							"value": "default"
+						},
+						{
+							"key": "sort",
+							"value": "createDateTime%2Cdesc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outbound-campaign-rest-controller_getoutboundCampaignPhoneEndpointList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/outboundcampaign/phoneendpoints",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"outboundcampaign",
+						"phoneendpoints"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outbound-campaign-rest-controller-Createoutboundcampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"id_div\",jsonData.content.outboundCampaignID);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test API-POSTMAN\",\r\n  \"description\": \"Testing API Automation\",\r\n  \"status\": \"new\",\r\n  \"clarifyMessage\": \"Testing API Automation\",\r\n   \"phoneEndpointID\": \"4da1e05b-c358-4aa6-8ec4-6a3070d48cbc\",\r\n  \"targetStartDateTime\": \"2018-08-25T10:09:50.940Z\",\r\n  \"startDateTime\": \"2018-08-25T10:09:50.940Z\",\r\n  \"completedDateTime\": \"2018-08-25T10:09:50.940Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/outboundcampaign",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"outboundcampaign"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outbound-campaign-rest-controller-getOutboundCampaign ",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"id_div\",jsonData.content.outboundCampaignID);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/outboundcampaign/{{id_div}}",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"outboundcampaign",
+						"{{id_div}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outbound-campaign-rest-controller-updateoutboundcampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"id_div\",jsonData.content.outboundCampaignID);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": \"Test Edit API-POSTMAN\",\r\n  \"description\": \"Testing API Automation\",\r\n  \"status\": \"new\",\r\n  \"clarifyMessage\": \"Testing API Automation\",\r\n   \"phoneEndpointID\": \"4da1e05b-c358-4aa6-8ec4-6a3070d48cbc\",\r\n  \"targetStartDateTime\": \"2018-08-25T10:09:50.940Z\",\r\n  \"startDateTime\": \"2018-08-25T10:09:50.940Z\",\r\n  \"completedDateTime\": \"2018-08-25T10:09:50.940Z\"\r\n}\r\n"
+				},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/outboundcampaign/{{id_div}}",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"outboundcampaign",
+						"{{id_div}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outbound-campaign-rest-controller_DeleteOutboundCampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"id_div\",jsonData.content.inboundPageID);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/outboundcampaign/{{id_div}}",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"outboundcampaign",
+						"{{id_div}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "outbound-campaign-rest-controller_getOutboundCampaignApplicantMetrics",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"id_div\",jsonData.content.outboundCampaignID);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/outboundcampaign/02084f22-c0e2-40bc-88db-16887490e8fc/applicant/metrics",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"outboundcampaign",
+						"02084f22-c0e2-40bc-88db-16887490e8fc",
+						"applicant",
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_getInboundCampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/459fd6b3-123a-4414-8856-688bcdc61d07",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"459fd6b3-123a-4414-8856-688bcdc61d07"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_getOrganizationcurrentkeyword",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/currentkeywords",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"currentkeywords"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_updateInboundCampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"inboundCampaignID\": \"459fd6b3-123a-4414-8856-688bcdc61d07\",\r\n  \"organizationID\": \"1f9292ae-5446-4b89-8e09-bf7c37f0d4c7\",\r\n  \"name\": \"Taco the Bell\",\r\n    \"startDateTime\": \"2018-09-14T06:41:45.181Z\",\r\n\t\"endDateTime\": \"2018-09-02T14:20:37.681Z\",\r\n    \"targetStartDateTime\": \"2018-08-01T04:19:00.000Z\",\r\n    \"targetEndDateTime\": \"2018-09-02T14:20:37.681Z\",\r\n   \r\n  \"status\": \"paused\",\r\n  \"description\": \"\",\r\n    \"welcomeMessage\": \"Thank you for applying to taco the bell. Please answer a few simple questions for us first\",\r\n    \"ejectMessage\": \"Sorry, there was an error or you've been ejected\",\r\n    \"clarifyMessage\": \"Please repeat with more detail.\",\r\n    \"finishedMessage\": \"Thank you.  Will get back with you shortly.\"\r\n}"
+				},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/459fd6b3-123a-4414-8856-688bcdc61d07",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"459fd6b3-123a-4414-8856-688bcdc61d07"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_archeiveinboundcampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/eafd7897-0cdb-4407-8e07-24d4a1cdc0b0/action/archive",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"eafd7897-0cdb-4407-8e07-24d4a1cdc0b0",
+						"action",
+						"archive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_pauseInboundCampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/459fd6b3-123a-4414-8856-688bcdc61d07/action/pause",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"459fd6b3-123a-4414-8856-688bcdc61d07",
+						"action",
+						"pause"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_startInboundCampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/459fd6b3-123a-4414-8856-688bcdc61d07/action/start",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"459fd6b3-123a-4414-8856-688bcdc61d07",
+						"action",
+						"start"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_getCampaignApplicantMetrics",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/459fd6b3-123a-4414-8856-688bcdc61d07/applicant/metrics",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"459fd6b3-123a-4414-8856-688bcdc61d07",
+						"applicant",
+						"metrics"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_getInboundRoutesForInboundCampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/459fd6b3-123a-4414-8856-688bcdc61d07/routes?sort=keyword%2Casc",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"459fd6b3-123a-4414-8856-688bcdc61d07",
+						"routes"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "keyword%2Casc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_createInboundRouteForInboundCampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"id_div\",jsonData.content.inboundRouteID);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "    {\r\n       \"inboundRouteID\": \"4ec594b5-1ec0-4b59-93ac-72aab3714d5a\",\r\n      \"inboundCampaignID\": \"459fd6b3-123a-4414-8856-688bcdc61d07\",\r\n      \"phoneEndpointID\": \"d7587468-4fa0-4c46-8c47-f8fc49f23625\",\r\n  \"keyword\": \"TesterAPI\"\r\n}"
+				},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/459fd6b3-123a-4414-8856-688bcdc61d07/routes",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"459fd6b3-123a-4414-8856-688bcdc61d07",
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_getInboundRotesForInboundCampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/459fd6b3-123a-4414-8856-688bcdc61d07/routes",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"459fd6b3-123a-4414-8856-688bcdc61d07",
+						"routes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "inbound-campaign-rest-controller_deleteInboundRouteForInboundCampaign",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;",
+							"var jsonData = JSON.parse(responseBody);",
+							"postman.setEnvironmentVariable(\"id_div\",jsonData.content.inboundRouteID);"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/inboundcampaign/459fd6b3-123a-4414-8856-688bcdc61d07/routes/{{id_div}}",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"inboundcampaign",
+						"459fd6b3-123a-4414-8856-688bcdc61d07",
+						"routes",
+						"{{id_div}}"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "analytics-rest-controller_getAnalyticsQueryList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/analytics/querylist",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"analytics",
+						"querylist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "analytics-rest-controller_getAnalyticsPeriodList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/analytics/periodlist",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"analytics",
+						"periodlist"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "analytics-rest-controller_executeAnalyticsQueryList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/analytics/execute?period=last30days&tz=EST5EDT&accessLevel=agent&queryNameList=active_recruiters",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"analytics",
+						"execute"
+					],
+					"query": [
+						{
+							"key": "period",
+							"value": "last30days"
+						},
+						{
+							"key": "tz",
+							"value": "EST5EDT"
+						},
+						{
+							"key": "accessLevel",
+							"value": "agent"
+						},
+						{
+							"key": "queryNameList",
+							"value": "active_recruiters"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-management-rest-controller_getOrganizationAccountlist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/usermanagement?sort=firstName%2Casc",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"usermanagement"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "firstName%2Casc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-management-rest-controller_GetUserMGMToptions",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/usermanagement/options",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"usermanagement",
+						"options"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-management-rest-controller_disableorg.accnt",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/usermanagement/9c5d3e0a-fded-4c8c-8318-0e2da3aa4272/action/disable",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"usermanagement",
+						"9c5d3e0a-fded-4c8c-8318-0e2da3aa4272",
+						"action",
+						"disable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-management-rest-controller_enableorg.acnt",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/usermanagement/9c5d3e0a-fded-4c8c-8318-0e2da3aa4272/action/enable",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"usermanagement",
+						"9c5d3e0a-fded-4c8c-8318-0e2da3aa4272",
+						"action",
+						"enable"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "user-management-rest-controller_resetpwd",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/usermanagement/9c5d3e0a-fded-4c8c-8318-0e2da3aa4272/action/resetpassword",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"usermanagement",
+						"9c5d3e0a-fded-4c8c-8318-0e2da3aa4272",
+						"action",
+						"resetpassword"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-rest-controller_getFlowList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/flow?filter-status=available&sort=createDateTime%2Cdesc",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"flow"
+					],
+					"query": [
+						{
+							"key": "filter-status",
+							"value": "available"
+						},
+						{
+							"key": "sort",
+							"value": "createDateTime%2Cdesc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-rest-controller_getFlowActionList",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/flow/flowaction",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"flow",
+						"flowaction"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-rest-controller-getFlow",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/flow/04928b6e-ae5e-444c-84aa-08f380b3c012",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"flow",
+						"04928b6e-ae5e-444c-84aa-08f380b3c012"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-rest-controller-updateFlow",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"flowID\": \"04928b6e-ae5e-444c-84aa-08f380b3c012\",\r\n  \"organizationID\": \"1f9292ae-5446-4b89-8e09-bf7c37f0d4c7\",\r\n  \"agentID\": \"f6a2d614-789e-44b5-881b-eaaa3b8c6994\",\r\n  \"name\": \"DO NOT DELETE\",\r\n  \"status\": \"available\",\r\n  \"visibility\": \"reusable\"\r\n}"
+				},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/flow/04928b6e-ae5e-444c-84aa-08f380b3c012",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"flow",
+						"04928b6e-ae5e-444c-84aa-08f380b3c012"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-rest-controller-getApplicantListForFlow",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/flow/04928b6e-ae5e-444c-84aa-08f380b3c012/applicants?filter-status=all&filter-campaign-ref-type=all&sort=createDateTime%2Casc",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"flow",
+						"04928b6e-ae5e-444c-84aa-08f380b3c012",
+						"applicants"
+					],
+					"query": [
+						{
+							"key": "filter-status",
+							"value": "all"
+						},
+						{
+							"key": "filter-campaign-ref-type",
+							"value": "all"
+						},
+						{
+							"key": "sort",
+							"value": "createDateTime%2Casc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-rest-controller-archive",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/flow/04928b6e-ae5e-444c-84aa-08f380b3c012/action/archive",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"flow",
+						"04928b6e-ae5e-444c-84aa-08f380b3c012",
+						"action",
+						"archive"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-rest-controller-restoreflow",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/flow/04928b6e-ae5e-444c-84aa-08f380b3c012/action/restore",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"flow",
+						"04928b6e-ae5e-444c-84aa-08f380b3c012",
+						"action",
+						"restore"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "flow-rest-controller-getpageflowlist",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/flow/04928b6e-ae5e-444c-84aa-08f380b3c012/pages?sort=createDateTime%2Casc",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"flow",
+						"04928b6e-ae5e-444c-84aa-08f380b3c012",
+						"pages"
+					],
+					"query": [
+						{
+							"key": "sort",
+							"value": "createDateTime%2Casc"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "organization-management-rest-controller-getOrganizationPreferences",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							"tests[\"Status code is 200\"] = responseCode.code === 200;"
+						]
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzUxMiJ9.eyJodHRwczovL2FwcC5nb2NhbnZhcy5pby9hY2NvdW50SUQiOiIyYTU4YzZkYy05YmE2LTQzMjctYTJlYi0yYmNmNGY0NTc2NjEiLCJodHRwczovL2FwcC5nb2NhbnZhcy5pby9pbXBlcnNvbmF0aW5nIjpmYWxzZSwic3ViIjoidGVzdCIsImlzcyI6Imh0dHBzOi8vYXBwLmdvY2FudmFzLmlvLyIsImF1ZCI6Im5vbmUiLCJpYXQiOjE1MzQ0MDMxMjAsImV4cCI6MTUzNTI2NzEyMH0.M6w36J1Jzj5UfCP8CVzeHass4X4RY_0BQdPpK403Q0wlwmVNqKoG7RVa4sqy0sEVO1DJC-ozMkpHD3Vs8B4tng"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "https://dev1-api.mycanvas.io/api/v1/organizationmanagement/preferences",
+					"protocol": "https",
+					"host": [
+						"dev1-api",
+						"mycanvas",
+						"io"
+					],
+					"path": [
+						"api",
+						"v1",
+						"organizationmanagement",
+						"preferences"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
